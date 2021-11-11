@@ -6,8 +6,7 @@ import 'package:myresume/pages/socialnetworks.dart';
 
 void main() {
   runApp(MaterialApp(
-    // Первоначальный экран
-    home: MainScreen(),
+    initialRoute: '/',
     // Роутер (для навигации по страницам)
     routes: {
       '/': (context) =>MainScreen(),
