@@ -9,9 +9,9 @@ void main() {
     initialRoute: '/',
     // Роутер (для навигации по страницам)
     routes: {
-      '/': (context) =>MainScreen(),
-      'about': (context) => About(),
-      'socialnetworks': (context) => SocialContext(),
+      '/': (context) =>const MainScreen(),
+      'about': (context) => const About(),
+      'socialnetworks': (context) => const SocialContext(),
     },
   ));
 }
