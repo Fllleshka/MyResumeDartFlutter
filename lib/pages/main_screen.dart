@@ -6,6 +6,118 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
+      body:
+          Column(
+            children:[
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                          Column(
+                            children: <Widget>[
+                              // Список дел
+                              Container(
+                                padding: EdgeInsets.all(kDefaultPaddin),
+                                height: 180,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                  color: Colors.lightBlueAccent,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Image.asset('assets/images/todolist.png'),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                                child: Text(
+                                  'Список дел',
+                                  style: TextStyle(
+                                      color: kTextColor
+                                  ),),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: <Widget>[
+                              // Магазинная вывеска
+                              Container(
+                                padding: EdgeInsets.all(kDefaultPaddin),
+                                height: 180,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                  color: Colors.lightBlueAccent,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Image.asset('assets/images/internetshop.png'),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                                child: Text(
+                                  'Интернет магазин',
+                                  style: TextStyle(
+                                      color: kTextColor
+                                  ),),
+                              ),
+                            ],
+                          )
+                        ]
+                    ),
+                ),
+              Padding(
+                padding: EdgeInsets.only(top: 8.0),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: <Widget>[
+                          // Список дел
+                          Container(
+                            padding: EdgeInsets.all(kDefaultPaddin),
+                            height: 180,
+                            width: 160,
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent,
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Image.asset('assets/images/herokenny.png'),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                            child: Text(
+                              '???????????',
+                              style: TextStyle(
+                                  color: kTextColor
+                              ),),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          // Магазинная вывеска
+                          Container(
+                            padding: EdgeInsets.all(kDefaultPaddin),
+                            height: 180,
+                            width: 160,
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent,
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Image.asset('assets/images/herokenny.png'),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                            child: Text(
+                              '???????????',
+                              style: TextStyle(
+                                  color: kTextColor
+                              ),),
+                          ),
+                        ],
+                      )
+                    ]
+                ),
+              ),
+          ])
     );
   }
 
@@ -47,101 +159,3 @@ class MainScreen extends StatelessWidget {
     );
   }
 }
-
-
-/*import 'package:flutter/material.dart';
-
-class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
-
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-
-  List FIOlist = [];
-
-  @override
-  void initState() {
-    super.initState();
-
-    FIOlist.addAll(['Флейснер', 'Владислав','Всеволодович']);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      // Шапка
-      appBar: AppBar(
-        backgroundColor: Colors.blueAccent.shade200,
-        title: const Text('Flutter разработчик Флейснер В.В.',
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.yellow,
-          )),
-        centerTitle: true,
-      ),
-      // Тело
-      body:
-      Container(
-        //height: 105,
-        child: ListView.separated(
-          separatorBuilder: (BuildContext context, int index) =>
-              Divider(height: 20),
-          shrinkWrap: true,
-          padding: EdgeInsets.all(10),
-          itemCount: FIOlist.length,
-          itemBuilder: (BuildContext context, int index){
-            return ElevatedButton(
-                onPressed: (){},
-                child: Text(
-                  FIOlist[index],
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.yellow,
-                  ),),
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(120, 50),
-                  primary: Colors.blueAccent,
-                  //padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)
-                  )
-                ),
-            );
-          },
-        ),
-        // Прописываем градиент background
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-            colors: [Colors.purple.shade200,Colors.blue.shade200]
-          ),
-        ),
-      ),
-      // Нижняя панель
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blueAccent,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-                Icons.call,
-                color: Colors.white,
-            ),
-                label: 'Call me',
-
-            ),
-          BottomNavigationBarItem(
-            icon: Icon(
-                Icons.mail,
-                color: Colors.white,
-              ),
-                label: 'E-mail me',
-            ),
-        ]
-      ),
-    );
-  }
-}*/
