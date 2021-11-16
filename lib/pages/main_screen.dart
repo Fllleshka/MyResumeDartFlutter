@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:myresume/pages/constants.dart';
 
+void OpenProject(String nameProject){
+  switch(nameProject) {
+    case 'ToDo':
+      {
+        print('Вызов функции TODO: $nameProject',);
+        break;
+      }
+    case 'InternetShop':
+      {
+        print('Вызов функции INTERNETSHOP: $nameProject',);
+        break;
+      }
+    default:
+      {
+        print('Вызов функции: $nameProject',);
+        break;
+      }
+  }
+}
+
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,22 +30,27 @@ class MainScreen extends StatelessWidget {
           Column(
             children:[
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 0),
+                padding: EdgeInsets.only(top: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                           Column(
                             children: <Widget>[
                               // Список дел
-                              Container(
-                                padding: EdgeInsets.all(kDefaultPaddin),
-                                height: 180,
-                                width: 160,
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlueAccent,
-                                  borderRadius: BorderRadius.circular(16),
+                              GestureDetector(
+                                onTap: (){
+                                  OpenProject('ToDo');
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.all(kDefaultPaddin),
+                                  height: 180,
+                                  width: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.lightBlueAccent,
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Image.asset('assets/images/todolist.png'),
                                 ),
-                                child: Image.asset('assets/images/todolist.png'),
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
@@ -40,15 +65,20 @@ class MainScreen extends StatelessWidget {
                           Column(
                             children: <Widget>[
                               // Магазинная вывеска
-                              Container(
-                                padding: EdgeInsets.all(kDefaultPaddin),
-                                height: 180,
-                                width: 160,
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlueAccent,
-                                  borderRadius: BorderRadius.circular(16),
+                              GestureDetector(
+                                onTap: (){
+                                  OpenProject('InternetShop');
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.all(kDefaultPaddin),
+                                  height: 180,
+                                  width: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.lightBlueAccent,
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Image.asset('assets/images/internetshop.png'),
                                 ),
-                                child: Image.asset('assets/images/internetshop.png'),
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
@@ -70,16 +100,20 @@ class MainScreen extends StatelessWidget {
                     children: [
                       Column(
                         children: <Widget>[
-                          // Список дел
-                          Container(
-                            padding: EdgeInsets.all(kDefaultPaddin),
-                            height: 180,
-                            width: 160,
-                            decoration: BoxDecoration(
-                              color: Colors.lightBlueAccent,
-                              borderRadius: BorderRadius.circular(16),
+                          GestureDetector(
+                            onTap: (){
+                              OpenProject('???');
+                            },
+                            child: Container(
+                              padding: EdgeInsets.all(kDefaultPaddin),
+                              height: 180,
+                              width: 160,
+                              decoration: BoxDecoration(
+                                color: Colors.lightBlueAccent,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Image.asset('assets/images/herokenny.png'),
                             ),
-                            child: Image.asset('assets/images/herokenny.png'),
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
@@ -93,16 +127,20 @@ class MainScreen extends StatelessWidget {
                       ),
                       Column(
                         children: <Widget>[
-                          // Магазинная вывеска
-                          Container(
-                            padding: EdgeInsets.all(kDefaultPaddin),
-                            height: 180,
-                            width: 160,
-                            decoration: BoxDecoration(
-                              color: Colors.lightBlueAccent,
-                              borderRadius: BorderRadius.circular(16),
+                          GestureDetector(
+                            onTap: (){
+                              OpenProject('???');
+                            },
+                            child: Container(
+                              padding: EdgeInsets.all(kDefaultPaddin),
+                              height: 180,
+                              width: 160,
+                              decoration: BoxDecoration(
+                                color: Colors.lightBlueAccent,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Image.asset('assets/images/herokenny.png'),
                             ),
-                            child: Image.asset('assets/images/herokenny.png'),
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
