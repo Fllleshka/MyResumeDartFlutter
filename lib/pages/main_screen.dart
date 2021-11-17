@@ -27,137 +27,140 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body:
-          Column(
-            children:[
-              Padding(
-                padding: EdgeInsets.only(top: 8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                          Column(
-                            children: <Widget>[
-                              // Список дел
-                              GestureDetector(
-                                onTap: (){
-                                  OpenProject('ToDo', context);
-                                },
-                                child: Container(
-                                  padding: EdgeInsets.all(kDefaultPaddin),
-                                  height: 180,
-                                  width: 160,
-                                  decoration: BoxDecoration(
-                                    color: Colors.lightBlueAccent,
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
-                                  child: Image.asset('assets/images/todolist.png'),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                                child: Text(
-                                  'Список дел',
-                                  style: TextStyle(
-                                      color: kTextColor
-                                  ),),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: <Widget>[
-                              // Магазинная вывеска
-                              GestureDetector(
-                                onTap: (){
-                                  OpenProject('InternetShop', context);
-                                },
-                                child: Container(
-                                  padding: EdgeInsets.all(kDefaultPaddin),
-                                  height: 180,
-                                  width: 160,
-                                  decoration: BoxDecoration(
-                                    color: Colors.lightBlueAccent,
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
-                                  child: Image.asset('assets/images/internetshop.png'),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                                child: Text(
-                                  'Интернет магазин',
-                                  style: TextStyle(
-                                      color: kTextColor
-                                  ),),
-                              ),
-                            ],
-                          )
-                        ]
-                    ),
-                ),
-              Padding(
-                padding: EdgeInsets.only(top: 8.0),
-                child: Row(
+      body: buildColumn(context)
+    );
+  }
+
+  Column buildColumn(BuildContext context) {
+    return Column(
+          children:[
+            Padding(
+              padding: EdgeInsets.only(top: 8.0),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Column(
-                        children: <Widget>[
-                          GestureDetector(
-                            onTap: (){
-                              OpenProject('???', context);
-                            },
-                            child: Container(
-                              padding: EdgeInsets.all(kDefaultPaddin),
-                              height: 180,
-                              width: 160,
-                              decoration: BoxDecoration(
-                                color: Colors.lightBlueAccent,
-                                borderRadius: BorderRadius.circular(16),
+                        Column(
+                          children: <Widget>[
+                            // Список дел
+                            GestureDetector(
+                              onTap: (){
+                                OpenProject('ToDo', context);
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(kDefaultPaddin),
+                                height: 180,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                  color: Colors.lightBlueAccent,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Image.asset('assets/images/todolist.png'),
                               ),
-                              child: Image.asset('assets/images/herokenny.png'),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                            child: Text(
-                              '???????????',
-                              style: TextStyle(
-                                  color: kTextColor
-                              ),),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: <Widget>[
-                          GestureDetector(
-                            onTap: (){
-                              OpenProject('???', context);
-                            },
-                            child: Container(
-                              padding: EdgeInsets.all(kDefaultPaddin),
-                              height: 180,
-                              width: 160,
-                              decoration: BoxDecoration(
-                                color: Colors.lightBlueAccent,
-                                borderRadius: BorderRadius.circular(16),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                              child: Text(
+                                'Список дел',
+                                style: TextStyle(
+                                    color: kTextColor
+                                ),),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            // Магазинная вывеска
+                            GestureDetector(
+                              onTap: (){
+                                OpenProject('InternetShop', context);
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(kDefaultPaddin),
+                                height: 180,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                  color: Colors.lightBlueAccent,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Image.asset('assets/images/internetshop.png'),
                               ),
-                              child: Image.asset('assets/images/herokenny.png'),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                            child: Text(
-                              '???????????',
-                              style: TextStyle(
-                                  color: kTextColor
-                              ),),
-                          ),
-                        ],
-                      )
-                    ]
-                ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                              child: Text(
+                                'Интернет магазин',
+                                style: TextStyle(
+                                    color: kTextColor
+                                ),),
+                            ),
+                          ],
+                        )
+                      ]
+                  ),
               ),
-          ])
-    );
+            Padding(
+              padding: EdgeInsets.only(top: 8.0),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: (){
+                            OpenProject('???', context);
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(kDefaultPaddin),
+                            height: 180,
+                            width: 160,
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent,
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Image.asset('assets/images/herokenny.png'),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                          child: Text(
+                            '???????????',
+                            style: TextStyle(
+                                color: kTextColor
+                            ),),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: (){
+                            OpenProject('???', context);
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(kDefaultPaddin),
+                            height: 180,
+                            width: 160,
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent,
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Image.asset('assets/images/herokenny.png'),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                          child: Text(
+                            '???????????',
+                            style: TextStyle(
+                                color: kTextColor
+                            ),),
+                        ),
+                      ],
+                    )
+                  ]
+              ),
+            ),
+        ]);
   }
 
   AppBar buildAppBar(context) {
