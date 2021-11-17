@@ -3,6 +3,7 @@ import 'package:myresume/pages/constants.dart';
 import 'package:myresume/pages/main_screen.dart';
 import 'package:myresume/pages/about.dart';
 import 'package:myresume/pages/socialnetworks.dart';
+import 'package:myresume/pages/todo.dart';
 
 
 void main() {
@@ -23,9 +24,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       // Роутер (для навигации по страницам)
       routes: {
-        '/': (context) =>MainScreen(),
-        'about': (context) => About(),
-        'socialnetworks': (context) => SocialContext(),
+        '/': (context) => MainScreen(),
+        '/about': (context) => About(),
+        '/socialnetworks': (context) => SocialContext(),
+        '/todo': (context) => ToDo(),
       },
     );
   }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:myresume/pages/constants.dart';
 
-void OpenProject(String nameProject){
+void OpenProject(String nameProject, context){
   switch(nameProject) {
     case 'ToDo':
       {
+        Navigator.pushNamed(context, '/todo');
         print('Вызов функции TODO: $nameProject',);
         break;
       }
@@ -39,7 +40,7 @@ class MainScreen extends StatelessWidget {
                               // Список дел
                               GestureDetector(
                                 onTap: (){
-                                  OpenProject('ToDo');
+                                  OpenProject('ToDo', context);
                                 },
                                 child: Container(
                                   padding: EdgeInsets.all(kDefaultPaddin),
@@ -67,7 +68,7 @@ class MainScreen extends StatelessWidget {
                               // Магазинная вывеска
                               GestureDetector(
                                 onTap: (){
-                                  OpenProject('InternetShop');
+                                  OpenProject('InternetShop', context);
                                 },
                                 child: Container(
                                   padding: EdgeInsets.all(kDefaultPaddin),
@@ -102,7 +103,7 @@ class MainScreen extends StatelessWidget {
                         children: <Widget>[
                           GestureDetector(
                             onTap: (){
-                              OpenProject('???');
+                              OpenProject('???', context);
                             },
                             child: Container(
                               padding: EdgeInsets.all(kDefaultPaddin),
@@ -129,7 +130,7 @@ class MainScreen extends StatelessWidget {
                         children: <Widget>[
                           GestureDetector(
                             onTap: (){
-                              OpenProject('???');
+                              OpenProject('???', context);
                             },
                             child: Container(
                               padding: EdgeInsets.all(kDefaultPaddin),
