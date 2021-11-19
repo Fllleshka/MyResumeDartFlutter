@@ -4,6 +4,7 @@ import 'package:myresume/pages/main_screen.dart';
 import 'package:myresume/pages/about.dart';
 import 'package:myresume/pages/socialnetworks.dart';
 import 'package:myresume/pages/todo.dart';
+import 'package:myresume/pages/internetshop.dart';
 
 
 void main() {
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/about': (context) => About(),
         '/socialnetworks': (context) => SocialContext(),
         '/todo': (context) => ToDo(),
+        '/internetShop': (context) => InternetShop(),
       },
     );
   }

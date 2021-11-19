@@ -11,6 +11,7 @@ void OpenProject(String nameProject, context){
       }
     case 'InternetShop':
       {
+        Navigator.pushNamed(context, '/internetShop');
         print('Вызов функции INTERNETSHOP: $nameProject',);
         break;
       }
@@ -174,16 +175,6 @@ class MainScreen extends StatelessWidget {
         ),
       ),
       centerTitle: true,
-      /*leading:
-      IconButton(
-        icon: Icon(
-          Icons.arrow_back,
-          color: kTextColor,
-        ),
-        onPressed: (){
-          Navigator.pop(context);
-        },
-      ),*/
       actions: <Widget>[
         IconButton(
             icon: Icon(
