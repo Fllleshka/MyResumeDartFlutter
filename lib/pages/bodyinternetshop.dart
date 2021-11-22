@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myresume/models/product.dart';
 import 'package:myresume/pages/constants.dart';
 import 'package:myresume/pages/categoriesinternetshop.dart';
+import 'package:myresume/pages/details/detailsscreeninternetshop.dart';
 import 'package:myresume/pages/itemcardinternetshop.dart';
 
 class BodyIntShop extends StatelessWidget {
@@ -33,6 +34,13 @@ class BodyIntShop extends StatelessWidget {
                   ),
                   itemBuilder: (context, index) => ItemCard(
                     product: products[index],
+                    press: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailsScreen(
+                              product: products[index],
+                            ),
+                        )),
                   ),
                 ),
             ),
