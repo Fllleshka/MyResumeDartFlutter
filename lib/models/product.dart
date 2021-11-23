@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 String dummyText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";
 
 class Product {
-  final String image, title, description, catig;
+  final String image, title, description, catig, head_title;
   final int price, size, id;
   final Color color;
   Product({
     required this.id,
     required this.image,
     required this.title,
+    required this.head_title,
     required this.price,
     required this.description,
     required this.catig,
@@ -22,6 +23,7 @@ List<Product> products = [
   Product(
     id: 1,
     title: "Офисная сумка",
+    head_title: "Модная аристократичная сумка",
     catig: "Офис",
     price: 12500,
     size: 12,
@@ -31,6 +33,7 @@ List<Product> products = [
   Product(
     id: 2,
     title: "Поясная сумка",
+    head_title: "Модная молодёжная сумка",
     catig: "Пояс",
     price: 9500,
     size: 8,
@@ -40,6 +43,7 @@ List<Product> products = [
   Product(
       id: 3,
       title: "Тоут сумка",
+      head_title: "Сумка на каждый день",
       catig: "Тоут",
       price: 14700,
       size: 10,
@@ -49,6 +53,7 @@ List<Product> products = [
   Product(
       id: 4,
       title: "Хит 2000",
+      head_title: "Нестареющая классика",
       catig: "Хит 2000",
       price: 11500,
       size: 11,
@@ -58,6 +63,7 @@ List<Product> products = [
   Product(
       id: 5,
       title: "Офисная сумка",
+      head_title: "Модная аристократичная сумка",
       catig: "Офис",
       price: 14900,
       size: 12,
@@ -67,6 +73,7 @@ List<Product> products = [
   Product(
     id: 6,
     title: "Офисная сумка",
+    head_title: "Модная аристократичная сумка",
     catig: "Офис",
     price: 15400,
     size: 12,
@@ -77,6 +84,7 @@ List<Product> products = [
   Product(
     id: 7,
     title: "Офисная сумка",
+    head_title: "Модная аристократичная сумка",
     catig: "Офис",
     price: 12500,
     size: 12,
@@ -87,6 +95,7 @@ List<Product> products = [
   Product(
     id: 8,
     title: "Тоут сумка",
+    head_title: "Сумка на каждый день",
     catig: "Тоут",
     price: 14700,
     size: 10,

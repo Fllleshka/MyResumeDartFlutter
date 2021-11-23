@@ -34,6 +34,15 @@ class InternetShop extends StatelessWidget {
       ),
       actions: <Widget>[
         IconButton(
+          onPressed: (){
+
+          },
+          icon: Icon(
+            Icons.shopping_cart,
+            color: kTextColor,
+          ),
+        ),
+        IconButton(
           icon: Icon(
             Icons.home_outlined,
             color: kTextColor,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myresume/pages/constants.dart';
 import 'package:myresume/models/product.dart';
+import 'package:myresume/pages/details/components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
@@ -14,18 +15,13 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: product.color,
       appBar: buildAppBar(context),
+      body: Body(product: product,),
     );
   }
   AppBar buildAppBar(context) {
     return AppBar(
       backgroundColor: product.color,
       elevation: 0,
-      title: Text(
-        product.title,
-        style: TextStyle(
-          color: kTextColor,
-        ),
-      ),
       centerTitle: true,
       leading:
       IconButton(
@@ -39,9 +35,18 @@ class DetailsScreen extends StatelessWidget {
       ),
       actions: <Widget>[
         IconButton(
+            onPressed: (){
+
+            },
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.white,
+            ),
+        ),
+        IconButton(
           icon: Icon(
             Icons.home_outlined,
-            color: kTextColor,
+            color: Colors.white,
           ),
           onPressed: (){
             // Переход домой без возможности возврата
