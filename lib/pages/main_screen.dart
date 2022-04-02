@@ -1,167 +1,86 @@
 import 'package:flutter/material.dart';
 import 'package:myresume/pages/constants.dart';
+import 'package:myresume/pages/components/mainscreencard.dart';
 
-void OpenProject(String nameProject, context){
-  switch(nameProject) {
-    case 'ToDo':
-      {
-        Navigator.pushNamed(context, '/todo');
-        print('Вызов функции TODO: $nameProject',);
-        break;
-      }
-    case 'InternetShop':
-      {
-        Navigator.pushNamed(context, '/internetShop');
-        print('Вызов функции INTERNETSHOP: $nameProject',);
-        break;
-      }
-    default:
-      {
-        print('Вызов функции: $nameProject',);
-        break;
-      }
+class ListViewColumn extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(top: 8.0),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // Список дел
+                MainScreenCard(
+                  nameProject: 'ToDo',
+                  assetImage: 'assets/images/todolist.png',
+                  titleProject: 'Список дел',
+                ),
+                // Магазинная вывеска
+                MainScreenCard(
+                    nameProject: 'InternetShop',
+                    assetImage: 'assets/images/internetshop.png',
+                    titleProject: 'Интернет магазин'
+                )
+              ]
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 8.0),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // Социальные сети
+                MainScreenCard(
+                    nameProject: 'SocialNetWorks',
+                    assetImage: 'assets/images/socialnetworkingapps.png',
+                    titleProject: 'Социальные сети'
+                ),
+                // Колон тиктока
+                MainScreenCard(
+                    nameProject: 'CloneTikTok',
+                    assetImage: 'assets/images/tiktoklogo.png',
+                    titleProject: 'Clone TikTok'
+                ),
+              ]
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 8.0),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // Клон нетфликса
+                MainScreenCard(
+                    nameProject: 'CloneNetflix',
+                    assetImage: 'assets/images/clonenetflixlogo.png',
+                    titleProject: 'Клон Netflix'
+                ),
+                // Магазинная вывеска
+                MainScreenCard(
+                    nameProject: '???',
+                    assetImage: 'assets/images/herokenny.png',
+                    titleProject: 'В разработке'
+                )
+              ]
+          ),
+        ),
+      ],
+    );
   }
 }
+
 
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: buildColumn(context)
+      body: ListViewColumn()
     );
-  }
-
-  Column buildColumn(BuildContext context) {
-    return Column(
-          children:[
-            Padding(
-              padding: EdgeInsets.only(top: 8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                        Column(
-                          children: <Widget>[
-                            // Список дел
-                            GestureDetector(
-                              onTap: (){
-                                OpenProject('ToDo', context);
-                              },
-                              child: Container(
-                                padding: EdgeInsets.all(kDefaultPaddin),
-                                height: 180,
-                                width: 160,
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlueAccent,
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: Image.asset('assets/images/todolist.png'),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                              child: Text(
-                                'Список дел',
-                                style: TextStyle(
-                                    color: kTextColor
-                                ),),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: <Widget>[
-                            // Магазинная вывеска
-                            GestureDetector(
-                              onTap: (){
-                                OpenProject('InternetShop', context);
-                              },
-                              child: Container(
-                                padding: EdgeInsets.all(kDefaultPaddin),
-                                height: 180,
-                                width: 160,
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlueAccent,
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: Image.asset('assets/images/internetshop.png'),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                              child: Text(
-                                'Интернет магазин',
-                                style: TextStyle(
-                                    color: kTextColor
-                                ),),
-                            ),
-                          ],
-                        )
-                      ]
-                  ),
-              ),
-            Padding(
-              padding: EdgeInsets.only(top: 8.0),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: <Widget>[
-                        GestureDetector(
-                          onTap: (){
-                            OpenProject('???', context);
-                          },
-                          child: Container(
-                            padding: EdgeInsets.all(kDefaultPaddin),
-                            height: 180,
-                            width: 160,
-                            decoration: BoxDecoration(
-                              color: Colors.lightBlueAccent,
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            child: Image.asset('assets/images/herokenny.png'),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                          child: Text(
-                            '???????????',
-                            style: TextStyle(
-                                color: kTextColor
-                            ),),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        GestureDetector(
-                          onTap: (){
-                            OpenProject('???', context);
-                          },
-                          child: Container(
-                            padding: EdgeInsets.all(kDefaultPaddin),
-                            height: 180,
-                            width: 160,
-                            decoration: BoxDecoration(
-                              color: Colors.lightBlueAccent,
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            child: Image.asset('assets/images/herokenny.png'),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                          child: Text(
-                            '???????????',
-                            style: TextStyle(
-                                color: kTextColor
-                            ),),
-                        ),
-                      ],
-                    )
-                  ]
-              ),
-            ),
-        ]);
   }
 
   AppBar buildAppBar(context) {
