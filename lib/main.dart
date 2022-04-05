@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:myresume/pages/constants.dart';
 import 'package:myresume/pages/main_screen.dart';
 import 'package:myresume/pages/about.dart';
+import 'package:myresume/pages/netflix/pages/privacypage.dart';
+import 'package:myresume/pages/netflix/pages/signinpage.dart';
 import 'package:myresume/pages/socialnetworks.dart';
 import 'package:myresume/pages/tiktok/tiktok.dart';
 import 'package:myresume/pages/todo.dart';
 import 'package:myresume/pages/internetshop.dart';
-import 'package:myresume/pages/clonenetflixui.dart';
-import 'package:myresume/pages/tiktok/tiktok.dart';
+import 'package:myresume/pages/netflix/clonenetflixui.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,6 +35,8 @@ class MyApp extends StatelessWidget {
         '/internetShop': (context) => InternetShop(),
         '/netflixui': (context) => CloneNetFlixUI(),
         '/tiktok': (context) => TikTok(),
+        '/pushtiktokprivacypage': (context) => privacyClass(),
+        '/signinpage': (context) => SignInPage(),
       },
     );
   }

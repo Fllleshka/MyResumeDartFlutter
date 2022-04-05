@@ -33,6 +33,18 @@ void OpenProject(String nameProject, context){
         print('Вызов функции CLONETIKTOK: $nameProject',);
         break;
       }
+    case 'PushTikTokPrivacyPage':
+      {
+        Navigator.pushNamed(context, '/pushtiktokprivacypage');
+        print('Вызов функции PushTikTokPrivacyPage: $nameProject',);
+        break;
+      }
+    case 'SignInPage':
+      {
+        Navigator.pushNamed(context, '/signinpage');
+        print('Вызов функции SignInPage: $nameProject',);
+        break;
+      }
     default:
       {
         print('Вызов функции: $nameProject',);
