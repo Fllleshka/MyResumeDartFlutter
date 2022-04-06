@@ -23,3 +23,4 @@ var privacylist = [
 ];
 
 final String logoNetflix = 'assets/images/netflix/netflixLogo.png';
+final String netflix = 'netflix';

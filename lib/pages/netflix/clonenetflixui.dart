@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:myresume/pages/components/mainscreencard.dart';
 
 class CloneNetFlixUI extends StatelessWidget {
@@ -6,14 +7,51 @@ class CloneNetFlixUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     TextStyle _textStyle;
     final String logoNetflix = 'assets/images/netflix/netflixLogo.png';
 
+    Stack _background(String asset){
+      return Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(asset),
+                  fit: BoxFit.cover,
+                )
+            ),
+          ),
+          Opacity(
+            opacity: 0.9,
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.black,
+                      Colors.black87
+                    ]
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+    }
     _textStyle = TextStyle(
       color: Colors.white,
       fontSize: 35,
       fontWeight: FontWeight.bold,
     );
+
+    var backgroundsList = [
+      _background('assets/images/netflix/netFlixBackground1.png'),
+      _background('assets/images/netflix/netFlixBackground2.png'),
+      _background('assets/images/netflix/netFlixBackground3.png'),
+      _background('assets/images/netflix/netFlixBackground4.png'),
+    ];
 
     return MaterialApp(
       //Убираем надпись debug справа сверху
@@ -59,27 +97,11 @@ class CloneNetFlixUI extends StatelessWidget {
         ),
         body: Stack(
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/netflix/netFlixBackground.png'),
-                        fit: BoxFit.cover,
-                      )
-                  ),
-                ),
-                Opacity(
-                  opacity: 0.75,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: RadialGradient(
-                        colors: [Colors.black54, Colors.black87, Colors.black],
-                        stops: [0.1, 0.7, 0.8],
-                        center: Alignment(0.0, 0.0),
-                        focal: Alignment(0.3, -0.2),
-                        focalRadius: 0.1,
-                      ),
-                    ),
-                  ),
+                Swiper(
+                  itemCount: backgroundsList.length,
+                  itemBuilder: (BuildContext context, int index){
+                    return backgroundsList[index];
+                  },
                 ),
                 Align(
                   alignment: Alignment.center,

@@ -18,7 +18,6 @@ class privacyClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-
     return MaterialApp(
       //Убираем надпись debug справа сверху
       debugShowCheckedModeBanner: false,
@@ -40,7 +39,7 @@ class privacyClass extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/netflix/netFlixBackground.png'),
+                    image: AssetImage('assets/images/netflix/netFlixBackground1.png'),
                     fit: BoxFit.cover,
                   )
               ),
