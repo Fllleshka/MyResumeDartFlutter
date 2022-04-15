@@ -45,6 +45,12 @@ void OpenProject(String nameProject, context){
         print('Вызов функции SignInPage: $nameProject',);
         break;
       }
+    case 'PushNetFlixGetStarted':
+      {
+        Navigator.pushNamed(context, '/getstrated');
+        print('Вызов функции PushNetFlixGetStarted: $nameProject',);
+        break;
+      }
     default:
       {
         print('Вызов функции: $nameProject',);

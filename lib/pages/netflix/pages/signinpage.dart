@@ -35,7 +35,7 @@ class SignInPage extends StatelessWidget {
   void _testinfo(String login, String password){
     if(login == netflix){
       if(password == netflix){
-        Navigator.pop(context);
+        Navigator.pushNamed(context, '/pagewithauth');
       }
     }
   }
@@ -84,6 +84,7 @@ class SignInPage extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  // Надпись
                   Container(
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.symmetric(horizontal: 20),
@@ -97,6 +98,7 @@ class SignInPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
+                  // Ввод имени пользователя
                   Container(
                     alignment: Alignment.center,
                     padding: EdgeInsets.symmetric(horizontal: 20),
@@ -109,6 +111,7 @@ class SignInPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
+                  // Ввод пароля
                   Container(
                     alignment: Alignment.center,
                     padding: EdgeInsets.symmetric(horizontal: 20),
@@ -122,6 +125,7 @@ class SignInPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
+                  //Кнопка
                   Container(
                     width: 370,
                     decoration: BoxDecoration(

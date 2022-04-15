@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:myresume/pages/constants.dart';
 import 'package:myresume/pages/main_screen.dart';
 import 'package:myresume/pages/about.dart';
+import 'package:myresume/pages/netflix/pages/getstarted.dart';
+import 'package:myresume/pages/netflix/pages/pagewithauth.dart';
 import 'package:myresume/pages/netflix/pages/privacypage.dart';
 import 'package:myresume/pages/netflix/pages/signinpage.dart';
 import 'package:myresume/pages/socialnetworks.dart';
@@ -37,6 +39,8 @@ class MyApp extends StatelessWidget {
         '/tiktok': (context) => TikTok(),
         '/pushtiktokprivacypage': (context) => privacyClass(),
         '/signinpage': (context) => SignInPage(),
+        '/getstrated': (context) => GetStartedNetflix(),
+        '/pagewithauth': (context) => PageWithAuth(),
       },
     );
   }
