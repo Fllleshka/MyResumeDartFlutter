@@ -18,29 +18,91 @@ class PageWithAuth extends StatelessWidget {
       'assets/images/netflix/spiderman/3.jpg',
       'assets/images/netflix/spiderman/4.jpg',
     ];
+    var actorsForSpiderMan = [
+      'assets/images/netflix/spiderman/actors/1.TomHolland.jpg',
+      'assets/images/netflix/spiderman/actors/2.Zandeya.jpg',
+      'assets/images/netflix/spiderman/actors/3.LoraHarrier.jpg',
+      'assets/images/netflix/spiderman/actors/4.MarisaTombey.jpg',
+      'assets/images/netflix/spiderman/actors/5.TonyRevolory.jpg',
+      'assets/images/netflix/spiderman/actors/6.JeycobBatalon.jpg',
+      'assets/images/netflix/spiderman/actors/7.JohnFavro.jpg',
+      'assets/images/netflix/spiderman/actors/8.KevinFaygi.jpg'
+    ];
+    var criticsForSpiderMan = [
+      'assets/images/netflix/spiderman/critics/first.jpg',
+      'assets/images/netflix/spiderman/critics/fiwth.jpg',
+      'assets/images/netflix/spiderman/critics/second.jpg',
+      'assets/images/netflix/spiderman/critics/seventh.webp',
+      'assets/images/netflix/spiderman/critics/sixth.jpeg',
+      'assets/images/netflix/spiderman/critics/third.jpg',
+    ];
+    var netflixOriginalPosters = [
+      'assets/images/netflix/spiderman/netflixOriginalPosters/0fbe56100068709.5f00aa5e71e9d.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/5e7568ad6be6ad05ce3896a90e0ea400.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/3611989-elcck2hxyaaa5mb.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/clinical-2017.webp',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/e9fae3dcae1a3b978adaf214cac3c607.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/e63aa1100068709.5f00aa5e73d4a.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/f7623d2950a8a54357336cd33e7889f6.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/imperial-dreams-2014.webp',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/mateus-caetano-propaganda-final-english.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/MoneyHeist-NetflixTVShowPosterFanArt_67917fbc-de8e-4228-90a4-217503d7bbd4.jpg',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/the-sandman-dream.webp',
+      'assets/images/netflix/spiderman/netflixOriginalPosters/Без названия.jpg',
+    ];
 
-    Container _poster (String asset){
+
+    Container _poster (){
       return Container(
-        height: 500,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          image:  DecorationImage(
-            image: AssetImage(asset),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.black, Colors.transparent],
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-            ),
-          ),
+        height: 500,
+        child: Swiper (
+          autoplay: true,
+          itemCount: imagesForDecoration.length,
+          itemBuilder: (BuildContext context, int index){
+            return Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(imagesForDecoration[index]),
+                    fit: BoxFit.cover,
+                  )
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Colors.black, Colors.transparent],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                  ),
+                ),
+              ),
+            );
+          },
+          onTap: (index){
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                    contentPadding: EdgeInsets.all(0),
+                    content:
+                    Container(
+                      height: 500,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        image:  DecorationImage(
+                          image: AssetImage(imagesForDecoration[index]),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                );
+              },
+            );
+          },
         ),
       );
     }
-    GestureDetector _ontapposter (String asset){
+    GestureDetector _ontapposter (){
       return GestureDetector(
         onTap: (){
           showDialog(
@@ -54,7 +116,7 @@ class PageWithAuth extends StatelessWidget {
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                           image:  DecorationImage(
-                            image: AssetImage(asset),
+                            image: AssetImage(imagesForDecoration[2]),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -63,9 +125,45 @@ class PageWithAuth extends StatelessWidget {
             },
           );
         },
-        child: _poster(asset),
+        child: _poster(),
       );
     }
+    Positioned _listView(top, widt, mass){
+      return Positioned(
+        top: top,
+        height: widt+8,
+        width: MediaQuery.of(context).size.width,
+        child: Container(
+            padding: EdgeInsets.only(left: 5),
+            decoration: BoxDecoration(
+                color: Colors.black87
+            ),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: mass.length,
+              itemBuilder: (BuildContext context, int index) =>
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Container(
+                      width: widt,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(mass[index]),
+                          fit: BoxFit.cover,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+            )
+        ),
+      );
+    }
+
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -85,20 +183,14 @@ class PageWithAuth extends StatelessWidget {
           children: <Widget>[
             // Подложка страницы
             Container(
-                height: 1300,
+                height: 1150,
                 width: MediaQuery.of(context).size.width,
-                color: Colors.orange
+                color: Colors.black87
             ),
             // Постер фильма
             Positioned(
               top: 0,
-              child:  _ontapposter(imagesForDecoration[3]),
-              /*Swiper (
-                itemCount: imagesForDecoration.length,
-                itemBuilder: (BuildContext context, int index){
-                  return _ontapposter(imagesForDecoration[index]);
-                },
-              ),*/
+              child: _ontapposter(),
             ),
             // Название фильма 1
             Positioned(
@@ -154,25 +246,32 @@ class PageWithAuth extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   // Левая кнопка List
-                  Column(
-                    children: [
-                      Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
-                      SizedBox(height: 2.0),
-                      Text(
-                        'List',
-                        style: TextStyle(
+                  GestureDetector(
+                    onTap: (){
+                      print('TAPPED ON LIST');
+                    },
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.add,
                           color: Colors.white,
-                          fontWeight: FontWeight.w600,
                         ),
-                      )
-                    ],
+                        SizedBox(height: 2.0),
+                        Text(
+                          'List',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   // Кнопка
                   TextButton.icon(
-                    onPressed: (){},
+                    onPressed: (){
+                      print('TAPPED ON PLAY');
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.white,
                       padding: EdgeInsets.only(left: 10, right: 15),
@@ -190,51 +289,114 @@ class PageWithAuth extends StatelessWidget {
                     ),
                   ),
                   // Правая кнопка Info
-                  Column(
-                    children: [
-                      Icon(
-                        Icons.info,
-                        color: Colors.white,
-                      ),
-                      SizedBox(height: 2.0),
-                      Text(
-                        'Info',
-                        style: TextStyle(
+                  GestureDetector(
+                    onTap: (){
+                      print('TAPPED ON INFO');
+                    },
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.info,
                           color: Colors.white,
-                          fontWeight: FontWeight.w600,
                         ),
-                      )
-                    ],
-                  ),
+                        SizedBox(height: 2.0),
+                        Text(
+                          'Info',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
+            ),
+            // Актёры
+            Positioned(
+              top: 485,
+              child: Container(
+                padding: EdgeInsets.only(right: 170),
+                child: Text(
+                  'Актёрский состав',
+                  style: TextStyle (
+                      fontSize: 20,
+                      fontFamily: 'FarFromHome',
+                      letterSpacing: 1,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+            ),
+            _listView(520.0, 130.0, actorsForSpiderMan),
+            // Обзоры и отзывы
+            Positioned(
+              top: 660,
+              child: Container(
+                padding: EdgeInsets.only(right: 170),
+                child: Text(
+                  'Обзоры и отзывы',
+                  style: TextStyle (
+                      fontSize: 20,
+                      fontFamily: 'FarFromHome',
+                      letterSpacing: 1,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+            ),
+            _listView(690.0, 122.0, criticsForSpiderMan),
+            // Original Netflix
+            Positioned(
+              top: 835,
+              child: Container(
+                child: Text(
+                  'Original NETFLIX',
+                  style: TextStyle (
+                      fontSize: 20,
+                      fontFamily: 'FarFromHome',
+                      letterSpacing: 1,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 865,
+              height: 250,
+              width: MediaQuery.of(context).size.width,
+              child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                      color: Colors.black87
+                  ),
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: netflixOriginalPosters.length,
+                    //separatorBuilder: (BuildContext context, int index) => Divider(),
+                    itemBuilder: (BuildContext context, int index) =>
+                        Card(
+                          child: Container(
+                            height: 400,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(netflixOriginalPosters[index]),
+                                fit: BoxFit.cover,
+                              ),
+                            )
+                        ),
+                        )
+                  )
+            )
             ),
           ]
         ),
       ),
-    );
-  }
-}
-
-class GradientText extends StatelessWidget {
-  const GradientText(
-      this.text, {
-        required this.gradient,
-        this.style,
-      });
-
-  final String text;
-  final TextStyle? style;
-  final Gradient gradient;
-
-  @override
-  Widget build(BuildContext context) {
-    return ShaderMask(
-      blendMode: BlendMode.srcIn,
-      shaderCallback: (bounds) => gradient.createShader(
-        Rect.fromLTWH(0, 0, bounds.width, bounds.height),
-      ),
-      child: Text(text, style: style),
     );
   }
 }

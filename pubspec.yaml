@@ -67,6 +67,9 @@ flutter:
     - assets/images/tiktok/
     - assets/images/netflix/
     - assets/images/netflix/spiderman/
+    - assets/images/netflix/spiderman/actors/
+    - assets/images/netflix/spiderman/critics/
+    - assets/images/netflix/spiderman/netflixOriginalPosters/
     - assets/videos/tiktok/
     - assets/gifs/
   #   - images/a_dot_ham.jpeg
