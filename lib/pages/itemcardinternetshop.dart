@@ -42,7 +42,7 @@ class ItemCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+            padding: const EdgeInsets.symmetric(vertical: 0),
             child: Text(
               product.price.toString() + " ₽",
               style: TextStyle(

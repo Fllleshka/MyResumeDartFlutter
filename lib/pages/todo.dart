@@ -107,7 +107,7 @@ class _ToDoState extends State<ToDo> {
                       textAlign: TextAlign.center,
                     ),
                     content: Image.asset(
-                      "../../assets/gifs/goodjob.gif",
+                      "assets/gifs/goodjob.gif",
                       height: 228,
                       width: 315,
                     ),
