@@ -1,9 +1,10 @@
-# myresume
-
 <h1 align="center">Всем привет! Меня зовут Владислав.</h1>
 <h3 align="center">Программист, разработчик, системный администратор.</h3>
 
-Главный экран приложения
+
+<h3>Главный экран приложения</h3>
+<img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" width="50%" height="50%">
+
 ![MainCreen](screenshotsforgithub/MainScreen.png "MainScreen")
 Тестовый проект на список дел\
 ![TodoListMainScreen](screenshotsforgithub/1.ToDoListMain.png "ToDoList")
