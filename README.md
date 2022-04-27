@@ -7,12 +7,12 @@
 
 
 <h3 align="center">Тестовый проект на список дел</h3>
-<h5> Главный экран приложения TodoList </h5>
-<h3  align="center"><img src="screenshotsforgithub/1.ToDoListMain.png" alt="TodoListMainScreen"></h3>
-<h5> Добавление нового дела в приложение </h5>
-<h3  align="center"><img src="screenshotsforgithub/1.ToDoListAddNew.png" alt="TodoListAddNewJob"></h3>
-<h5> Свайп дела (выполнение) вправо или в лево </h5>
-<h3  align="center"><img src="screenshotsforgithub/1.ToDoListSwipeRightOrLeft.png" alt="TodoListEndJob"></h3>
+<h4 align="center"> Главный экран приложения TodoList </h4>
+<h5  align="center"><img src="screenshotsforgithub/1.ToDoListMain.png" alt="TodoListMainScreen"></h5>
+<h4 align="center"> Добавление нового дела в приложение </h4>
+<h5  align="center"><img src="screenshotsforgithub/1.ToDoListAddNew.png" alt="TodoListAddNewJob"></h5>
+<h4 align="center"> Свайп дела (выполнение) вправо или в лево </h4>
+<h5  align="center"><img src="screenshotsforgithub/1.ToDoListSwipeRightOrLeft.png" alt="TodoListEndJob"></h5>
 
 
 ![TodoListMainScreen](screenshotsforgithub/1.ToDoListMain.png "ToDoList")
