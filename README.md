@@ -3,7 +3,7 @@
 
 
 <h3 align="center">Главный экран приложения</h3>
-<p style="text-align:center;"><img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" width="225" height="425"></p>
+<center><img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" width="225" height="425"></center>
 
 ![MainCreen](screenshotsforgithub/MainScreen.png "MainScreen")
 Тестовый проект на список дел\
