@@ -12,7 +12,7 @@
 <h4 align="center"> Добавление нового дела в приложение </h4>
 <h5  align="center"><img src="screenshotsforgithub/1.ToDoListAddNew.png" alt="TodoListAddNewJob"></h5>
 <h4 align="center"> Свайп дела (выполнение) вправо или в лево </h4>
-<h5  align="center"><img src="srcreenshotsforgithub/1.ToDoListSwipeRightOrLeft.png" alt="TodoListEndJob"></h5>
+<h5  align="center"><img src="screenshotsforgithub/1.ToDoListSwipeRightOrLeft.png" alt="TodoListEndJob"></h5>
 
 <h3 align="center">Тестовый проект интернет магазин</h3>
 <h4 align="center"> Главный экран интернет магазина </h4>
@@ -31,9 +31,9 @@
 <h4 align="center"> Политика компании с кнопкой подтвердить </h4>
 <h5  align="center"><img src="screenshotsforgithub/4.NetflixPrivacy.png" alt="NetflixPrivacy"></h5>
 <h4 align="center"> Регистрация нового аккаунта (тестовый аккаунт) </h4>
-<h4 align="left"> Login: netflix </h4>
-<h4 align="left"> Password: netflix </h4>
-<h4 align="left"> Email: netflix@gmail.com </h4>
+<h4 align="left"> Login: &nbsp;&nbsp;&nbsp;netflix </h4>
+<h4 align="left"> Password: &nbsp;&nbsp;netflix </h4>
+<h4 align="left"> Email: &nbsp;&nbsp;&nbsp;netflix@gmail.com </h4>
 <h5  align="center"><img src="screenshotsforgithub/4.NetflixSignUP.png" alt="NetflixSignUP"></h5>
 <h4 align="center"> Успешная регистрация в приложении </h4>
 <h5  align="center"><img src="screenshotsforgithub/4.NetflixSignUPCompleted.png" alt="NetflixSignUPCompleted"></h5>
