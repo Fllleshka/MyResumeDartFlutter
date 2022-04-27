@@ -3,7 +3,7 @@
 
 
 <h3>Главный экран приложения</h3>
-<img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" width="50%" height="50%">
+<img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" height="50%">
 
 ![MainCreen](screenshotsforgithub/MainScreen.png "MainScreen")
 Тестовый проект на список дел\
