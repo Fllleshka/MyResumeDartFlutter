@@ -1,10 +1,11 @@
 # myresume
 
-This flutter project can help me get a job.
+<h1 align="center">Всем привет! Меня зовут Владислав.</h1>
+<h3 align="center">Программист, разработчик, системный администратор.</h3>
 
 Главный экран приложения
 ![MainCreen](screenshotsforgithub/MainScreen.png "MainScreen")
-Тестовый проект на список дел
+Тестовый проект на список дел\
 ![TodoListMainScreen](screenshotsforgithub/1.ToDoListMain.png "ToDoList")
 ![TodoListAddNewJob](screenshotsforgithub/1.ToDoListAddNew.png "ToDoList")
 ![TodoListEndJob](screenshotsforgithub/1.ToDoListSwipeRightOrLeft.png "ToDoList")
