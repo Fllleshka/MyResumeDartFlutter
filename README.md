@@ -31,9 +31,9 @@
 <h4 align="center"> Политика компании с кнопкой подтвердить </h4>
 <h5  align="center"><img src="screenshotsforgithub/4.NetflixPrivacy.png" alt="NetflixPrivacy"></h5>
 <h4 align="center"> Регистрация нового аккаунта (тестовый аккаунт) </h4>
-<h4 align="left"> Login: &nbsp;&nbsp;&nbsp;netflix </h4>
-<h4 align="left"> Password: &nbsp;&nbsp;netflix </h4>
-<h4 align="left"> Email: &nbsp;&nbsp;&nbsp;netflix@gmail.com </h4>
+<h4 align="left"> Login: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netflix </h4>
+<h4 align="left"> Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netflix </h4>
+<h4 align="left"> Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netflix@gmail.com </h4>
 <h5  align="center"><img src="screenshotsforgithub/4.NetflixSignUP.png" alt="NetflixSignUP"></h5>
 <h4 align="center"> Успешная регистрация в приложении </h4>
 <h5  align="center"><img src="screenshotsforgithub/4.NetflixSignUPCompleted.png" alt="NetflixSignUPCompleted"></h5>
