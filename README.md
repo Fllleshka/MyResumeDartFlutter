@@ -5,8 +5,13 @@
 <h3 align="center">Главный экран приложения</h3>
 <h3  align="center"><img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" width="225" height="425"></h3>
 
-![MainCreen](screenshotsforgithub/MainScreen.png "MainScreen")
-Тестовый проект на список дел\
+
+<h3 align="center">Тестовый проект на список дел</h3>
+<img src="screenshotsforgithub/1.ToDoListMain.png" alt="TodoListMainScreen" width="225" height="425">
+<img src="screenshotsforgithub/1.ToDoListAddNew.png" alt="TodoListAddNewJob" width="225" height="425">
+<img src="screenshotsforgithub/1.ToDoListSwipeRightOrLeft.png" alt="TodoListEndJob" width="225" height="425">
+
+
 ![TodoListMainScreen](screenshotsforgithub/1.ToDoListMain.png "ToDoList")
 ![TodoListAddNewJob](screenshotsforgithub/1.ToDoListAddNew.png "ToDoList")
 ![TodoListEndJob](screenshotsforgithub/1.ToDoListSwipeRightOrLeft.png "ToDoList")
