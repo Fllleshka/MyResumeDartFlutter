@@ -2,8 +2,8 @@
 <h3 align="center">Программист, разработчик, системный администратор.</h3>
 
 
-<h3>Главный экран приложения</h3>
-<img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" width="225" height="425">
+<h3 align="center">Главный экран приложения</h3>
+<img src="screenshotsforgithub/MainScreen.png" alt="MainCreen" width="225" height="425" align="center">
 
 ![MainCreen](screenshotsforgithub/MainScreen.png "MainScreen")
 Тестовый проект на список дел\
